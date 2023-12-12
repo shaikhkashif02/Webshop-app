@@ -2,7 +2,7 @@ version: '3'
 
 services:
   webshop_clj:
-    image: your-clojure-image:latest  # Replace 'your-clojure-image' with your actual image name
+    image: clojure:latest  # Replace 'your-clojure-image' with your actual image name
     ports:
       - "9001:9001"
     environment:
