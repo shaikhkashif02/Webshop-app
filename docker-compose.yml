@@ -19,7 +19,7 @@ services:
       - "DB_HOST=db"
       - "WEB_HOST=0.0.0.0"
     ports:
-      - "8080:8080"
-    command: java -jar app.jar
+      - "8081:8080"  # Change this line to use a different host port, e.g., "8081:8080"
+    command: sh -c "while ! nc -z db 5432; do sleep 1; done && java -jar app.jar"
     depends_on:
       - db
